@@ -6,7 +6,7 @@ import { ModalProvider } from './contexts/ModalContext';
 import { MultizapProvider } from './contexts/MultiSessionContext';
 import { ThemeProvider } from './contexts/ThemeContext';
 ReactDOM.render(
-  <AppTitleProvider defaultTitle="Multizap System">
+  <AppTitleProvider defaultTitle={process.env.REACT_APP_INITIAL_TITLE}>
     <React.StrictMode>
           <ThemeProvider>
             <MultizapProvider>
