@@ -7,8 +7,16 @@ export default <T>(key: string, intialState: T): PersistentState<T> => {
         const ls = localStorage.getItem(key);
         if(!ls)
             return intialState;
-        return JSON.parse(ls);
+        return tryParseJson(ls);
     });
 
     return [value, setValue, (value: T) => localStorage.setItem(key, JSON.stringify(value))];
+}
+
+export const tryParseJson = (data: string) => {
+    try{
+        return JSON.parse(data);
+    } catch{
+        return null;
+    }
 }
