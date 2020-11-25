@@ -1,9 +1,8 @@
 import { Dictionary, MessageHeader, SessionChatMessageDictionary } from "@common/communication";
 import { SessionData } from "@common/whatsapp/sessions";
 import { SessionChatMessage } from "@common/whatsapp/sessions/chats/messages";
-import React, { createContext, FC, useCallback, useContext, useEffect, useState } from "react";
+import React, { createContext, FC, Reducer, useCallback, useContext, useEffect, useReducer, useState } from "react";
 import SessionWS from "../services/SessionWS";
-import { getReducer } from "./reducers/SessionChatMessage";
 
 export type SessionDataMap = Record<string, SessionData>;
 
@@ -47,7 +46,11 @@ export const MultizapProvider: FC = ({children}) => {
 
     const [connectionStatus, setConnectionStatus] = useState<ConnectionStatus>();
 
-    const [sessionChatMessages, dispatchChatMessages] = getReducer<SessionChatMessageDictionary>({});
+    const useGetReducer = function<T>(initialState: T){
+        return useReducer<Reducer<T,(state: T) => T>>((state, action) => action(state), initialState);
+    } 
+
+    const [sessionChatMessages, dispatchChatMessages] = useGetReducer<SessionChatMessageDictionary>({});
     
     const updateMessage = useCallback((sessionId: string, chatId: string, message: SessionChatMessage) => {
         console.log(`new message: ${message}`)

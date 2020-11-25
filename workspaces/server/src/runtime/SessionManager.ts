@@ -1,4 +1,4 @@
-import { SessionData } from "../../../common/whatsapp/sessions";
+import { SessionData } from "@common/whatsapp/sessions";
 import { WhatsappSession } from "../whatsapp/Session";
 
 export default class SessionManager {

@@ -1,7 +1,7 @@
 import React from "react";
 import { FC } from "react";
 import { useHistory } from "react-router-dom";
-import { SessionData } from "../../../../common/whatsapp/sessions";
+import { SessionData } from "@common/whatsapp/sessions";
 import BatteryIndicator from "./BatteryIndicator";
 import { BottomContent, Container, Content, Heading, LastMessage, Marks, ProfilePicture, TopContent } from "./styles";
 

@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { useHistory } from "react-router-dom";
-import { SessionData } from "../../../../common/whatsapp/sessions";
-import { SessionChatType } from "../../../../common/whatsapp/sessions/chats";
+import { SessionData } from "@common/whatsapp/sessions";
+import { SessionChatType } from "@common/whatsapp/sessions/chats";
 import Sidebar from "../Sidebar";
 import List from "../Sidebar/List";
 import ListItem from "../Sidebar/List/ListItem";

@@ -3,7 +3,7 @@ import * as wprovider from 'venom-bot';
 import { SessionChat, SessionChatType } from "@common/whatsapp/sessions/chats";
 import { SessionData, SessionState } from "@common/whatsapp/sessions";
 import { SessionChatMessage, MessageType, SessionAckMessage, SesssionAckType } from "@common/whatsapp/sessions/chats/messages";
-import { Dictionary } from "../../../common/communication";
+import { Dictionary } from "@common/communication";
 
 
 export const createVenomSession: createSession<VenomWhatsappSession> = ({name, token, qrListener}: CreateSessionProps) => {

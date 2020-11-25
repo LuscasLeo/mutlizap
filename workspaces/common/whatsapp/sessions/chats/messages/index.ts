@@ -1,9 +1,9 @@
 export interface SessionChatMessage {
-    id: string
-    chatId: string
-    content: string
-    senderId: string
-    type: MessageType
+    id: string,
+    chatId: string,
+    content: string,
+    senderId: string,
+    type: MessageType,
 }
 
 export interface SessionAckMessage {

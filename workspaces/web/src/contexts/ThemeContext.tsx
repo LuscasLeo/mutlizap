@@ -1,8 +1,7 @@
-import React, { createContext, FC, useContext, useEffect } from "react";
+import React, { createContext, FC, useContext, useEffect, useState } from "react";
 import {ThemeProvider as StyledThemeProvider} from 'styled-components';
 import dark from "../styles/themes/dark";
 import light from "../styles/themes/light";
-import usePersistenState from "../utils/usePersistenState";
 
 export enum ThemeColorScheme {
     LIGHT = "LIGHT",
@@ -27,7 +26,7 @@ const {Provider} = Context;
 
 export const ThemeProvider: FC = ({children}) => {
 
-    const [colorScheme, setColorScheme, updateLS] = usePersistenState<ThemeColorScheme>(THEME_KEY, ThemeColorScheme.LIGHT);
+    const [colorScheme, setColorScheme] = useState<ThemeColorScheme>(ThemeColorScheme.LIGHT);
 
     useEffect(() => {
         const match = window.matchMedia('(prefers-color-scheme: dark)');
@@ -49,7 +48,6 @@ export const ThemeProvider: FC = ({children}) => {
 
     const functions = {
         setColorScheme(value: ThemeColorScheme) {
-            updateLS(value);
             setColorScheme(value);
         }
     }

@@ -1,7 +1,7 @@
 import { SessionData, SessionState } from '@common/whatsapp/sessions';
 import { SessionChat } from '@common/whatsapp/sessions/chats';
 import { SessionAckMessage, SessionChatMessage } from '@common/whatsapp/sessions/chats/messages';
-import { Dictionary } from '../../../common/communication';
+import { Dictionary } from '@common/communication';
 export interface SessionEmitter {
     "contact_message": {message: string}
     "connection_status": {message: string}
