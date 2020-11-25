@@ -21,7 +21,7 @@ export const BatteryIcon = styled.span<PercentageProps>`
     &::after {
         content: '';
         display: block;
-        flex: ${({value}) => value};
+        flex: ${({ value }) => value};
         background-color: #49b449;
         position: relative;
         border-radius: 1px;

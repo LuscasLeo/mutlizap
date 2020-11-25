@@ -1,5 +1,5 @@
-import React, { DOMAttributes } from "react";
-import { FC } from "react";
+import React, { DOMAttributes, FC } from "react";
+
 import styled from "styled-components";
 import Button from "../../../Button";
 
@@ -36,5 +36,4 @@ const ClickableListItemStyled = styled(Container)`
 
 `;
 
-export const ClickableListItem: FC<DOMAttributes<HTMLButtonElement>> = (props) => <ClickableListItemStyled {...props} as={Button}/>
-
+export const ClickableListItem: FC<DOMAttributes<HTMLButtonElement>> = (props) => <ClickableListItemStyled {...props} as={Button}/>;

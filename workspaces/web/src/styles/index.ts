@@ -1,5 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
-
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -61,7 +60,7 @@ export const GlobalStyles = createGlobalStyle`
 
     
 
-`;
+`
 
 export const AppGrid = styled.div`
     display: grid;
@@ -77,5 +76,4 @@ export const AppGrid = styled.div`
     max-height: 100vh;
 
 
-`;
-
+`

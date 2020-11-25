@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {Container as MainContainer} from '../Main/styles';
+import { Container as MainContainer } from "../Main/styles";
 
 export const Container = styled(MainContainer)`
     display: flex;
@@ -9,14 +9,13 @@ export const Container = styled(MainContainer)`
     padding: 0 .4em;
 `;
 
-
 export interface MessageProps {
     isMe?: boolean
 }
 
 export const Message = styled.div<MessageProps>`
-    /* grid-area: ${props => props.isMe ? 'me' : 'sender'}; */
-    align-self: ${({isMe}) => isMe ? 'flex-end' : 'flex-start'};
+    /* grid-area: ${props => props.isMe ? "me" : "sender"}; */
+    align-self: ${({ isMe }) => isMe ? "flex-end" : "flex-start"};
     background-color: #537b96;
     border-radius: 3px;
     margin-bottom: 1em;
@@ -27,8 +26,8 @@ export const Message = styled.div<MessageProps>`
 `;
 
 Message.defaultProps = {
-    isMe: true
-}
+	isMe: true
+};
 
 export const MessageContainer = styled.div`
     display: flex;

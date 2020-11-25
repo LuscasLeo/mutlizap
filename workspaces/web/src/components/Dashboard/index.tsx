@@ -12,7 +12,7 @@ const Dashboard: FC = () => {
 	useEffect(() => {
 		appTitle.setTitle("Multizap - Sessões");
 	}, []);
-    return (
+	return (
 		<AppGrid>
 			<MainHeader />
 			<SessionsSidebar />
@@ -23,7 +23,7 @@ const Dashboard: FC = () => {
 
 			<CommonFooter />
 		</AppGrid>
-        )
-    }
-    
-    export default Dashboard;
+	);
+};
+
+export default Dashboard;

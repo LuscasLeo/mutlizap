@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const Container = styled.div`
     /* background-color: #eee; */
     width: 30rem;
@@ -46,8 +45,8 @@ export interface ModalOverlayProps {
 
 export const ModalOverlay = styled.div<ModalOverlayProps>`
 
-    opacity: ${({visible}) => visible ? '1' : '0'};
-    pointer-events: ${({visible}) => visible ? 'initial' : 'none'};
+    opacity: ${({ visible }) => visible ? "1" : "0"};
+    pointer-events: ${({ visible }) => visible ? "initial" : "none"};
     position: fixed;
     top: 0;
     bottom: 0;

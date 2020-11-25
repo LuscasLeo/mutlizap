@@ -8,7 +8,7 @@ export interface ContactButtonProps {
 export const Container = styled.button<ContactButtonProps>`
     width: 100%;
     border: none;
-    background-color: ${({color}) => color};
+    background-color: ${({ color }) => color};
     height: 4rem;
     display: flex;
     align-items: center;
@@ -16,16 +16,16 @@ export const Container = styled.button<ContactButtonProps>`
     cursor: pointer;
     padding: 0 .5rem;
     font-family: inherit;
-    border-bottom: 1px solid ${({color}) => Color(color).darken(.1).hex()};
+    border-bottom: 1px solid ${({ color }) => Color(color).darken(0.1).hex()};
 
     &:hover, :focus {
-        background-color: ${({color}) => Color(color).darken(.1).hex()}
+        background-color: ${({ color }) => Color(color).darken(0.1).hex()}
     }
 `;
 
 Container.defaultProps = {
-    color: '#eee'
-}
+	color: "#eee"
+};
 
 export const ProfilePicture = styled.img`
     height: 49px;
@@ -50,7 +50,7 @@ export const LastMessage = styled.span`
 
 export const LastMessageDateTime = styled.span`
     font-size: 12px;
-`;  
+`;
 
 export const TopContent = styled.div`
     display: flex;
