@@ -1,0 +1,27 @@
+{
+  // "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "lib": ["es6"],
+    "strict": true,
+    "strictNullChecks": false,
+    "sourceMap": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declarationDir": "./dist",
+    "outDir": "./dist",
+    "strictPropertyInitialization": false,
+    "baseUrl": ".",
+    "paths": {
+      "@common/*": ["../common/*"]
+    }
+  },
+  "exclude": [
+    "dist"
+  ]
+    
+}

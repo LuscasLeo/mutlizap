@@ -1,0 +1,25 @@
+{
+  "name": "@multizap/root",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "workspaces/*"
+    ],
+    "nohoist": [
+      "workspaces/**/webpack-dev-server",
+      "**/babel-loader",
+      "**/babel-jest",
+      "**/typeorm",
+      "typeorm/**",
+      "typeorm",
+      "app-root-path/**",
+      "**/app-root-path",
+      "app-root-path"
+    ]
+  },
+  "scripts": {
+    "start:web": "yarn workspace @multizap/web start",
+    "web": "yarn workspace @multizap/web",
+    "server": "yarn workspace @multizap/server"
+  }
+}
