@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -60,12 +60,12 @@ export const GlobalStyles = createGlobalStyle`
 
     
 
-`
+`;
 
 export const AppGrid = styled.div`
     display: grid;
-    grid-template-columns: minmax(220px, 300px) 1fr 1fr 1fr;
-    grid-template-rows: 4rem 1fr 5rem;
+    grid-template-columns: auto 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
 
     grid-template-areas: 
         "header header header header"
@@ -76,4 +76,4 @@ export const AppGrid = styled.div`
     max-height: 100vh;
 
 
-`
+`;

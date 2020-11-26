@@ -27,7 +27,7 @@ const SessionBoard: FC = () => {
 	}, [sessionChatMessages, chatid, sessionid, connectionStatus]);
 
 	useEffect(() => {
-		if (connectionStatus == ConnectionStatus.CONNECTED && sessionid && chatid) { getOrLoadMessages(sessionid, chatid); }
+		if (connectionStatus === ConnectionStatus.CONNECTED && sessionid && chatid) { getOrLoadMessages(sessionid, chatid); }
 	}, [connectionStatus, sessionid, chatid]);
 
 	const loadEarlierMessages = async () => {

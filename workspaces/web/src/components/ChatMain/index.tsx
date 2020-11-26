@@ -74,7 +74,7 @@ const ChatMain: FC<ChatMainProps> = ({ sessionData, chat, messages, loadEarlierM
 	}, [containerRef]);
 
 	useEffect(() => {
-		if (lastScrollHeight - lastOffsetHeight == lastScrollTop) {
+		if (lastScrollHeight - lastOffsetHeight === lastScrollTop) {
 			containerRef.current.scroll({
 				behavior: "smooth",
 				top: containerRef.current.scrollHeight

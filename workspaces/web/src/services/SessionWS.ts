@@ -3,6 +3,12 @@ import WebSocketClient, { MessageParser } from "./ws";
 import { ClientEventsTypes, ServerEventTypes } from "@common/communication";
 import { ICloseEvent } from "websocket";
 
+export const jsonParser: MessageParser<any> = {
+	encode: data => JSON.stringify(data),
+	decode: messageEvent => JSON.parse(messageEvent.data.toString("utf8"))
+};
+
+
 export type SessionWSEventTypes = {
 	"close": (event: ICloseEvent) => void,
 	"disconnect": (event: ICloseEvent) => void
@@ -68,10 +74,7 @@ export class SessionWS extends EventEmitter {
 
 export default SessionWS;
 
-export const jsonParser: MessageParser<any> = {
-	encode: data => JSON.stringify(data),
-	decode: messageEvent => JSON.parse(messageEvent.data.toString("utf8"))
-};
+
 
 export interface JsonMessage {
 	header: string

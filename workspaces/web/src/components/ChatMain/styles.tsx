@@ -10,7 +10,7 @@ export const Container = styled(MainContainer)`
 `;
 
 export interface MessageProps {
-    isMe?: boolean
+    isMe?: boolean;
 }
 
 export const Message = styled.div<MessageProps>`

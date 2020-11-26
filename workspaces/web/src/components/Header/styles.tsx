@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.header`
     grid-area: header;
+    height: 4rem;
     display: flex;
     align-items: center;
     background-color: ${props => props.theme.colors.primary};
@@ -10,6 +11,8 @@ export const Container = styled.header`
     font-weight: 600;
 `;
 export const RightContent = styled.div`
+    display: flex;
+    gap: 1em;
 `;
 
 export const LeftContent = styled.div`

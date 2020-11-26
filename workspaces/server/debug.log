@@ -875,3 +875,4 @@
 [1123/152756.570:ERROR:file_io_win.cc(162)] CreateFile C:\Users\lucas\AppData\Local\Temp\puppeteer_dev_chrome_profile-iZVDLg\Crashpad\settings.dat: O sistema não pode encontrar o caminho especificado. (0x3)
 [1123/152756.570:ERROR:file_io_win.cc(171)] CreateFile C:\Users\lucas\AppData\Local\Temp\puppeteer_dev_chrome_profile-iZVDLg\Crashpad\reports\9640afdd-0786-40be-9353-5753b1b29426.dmp: O sistema não pode encontrar o caminho especificado. (0x3)
 [1123/152756.570:ERROR:crash_report_exception_handler.cc(99)] PrepareNewCrashReport failed
+[1125/181244.774:ERROR:directory_reader_win.cc(43)] FindFirstFile: O sistema não pode encontrar o caminho especificado. (0x3)
